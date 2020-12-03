@@ -90,6 +90,7 @@ p{
     letter-spacing: .4rem;
     display: flex;
     cursor: pointer;
+    outline: none;
 }
 
 .shop-btn:hover{
@@ -104,7 +105,7 @@ p{
 .switch-btn{
     background: black;
     padding: 10px;
-    width: 87px;
+    width: 82px;
     margin-left: -40px;
     display: flex;
     justify-content: space-between;
@@ -260,7 +261,7 @@ p{
 
 @media screen and (max-width:420px){
     .hero-info h1{
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
 
     .about-company h3{
@@ -269,10 +270,6 @@ p{
 }
 
 @media screen and (max-width:350px){
-    .hero-info h1{
-        font-size: 1.4rem;
-    }
-
     .about-company h3{
         font-size: 1rem;
     }

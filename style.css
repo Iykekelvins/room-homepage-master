@@ -202,6 +202,12 @@ p{
         cursor: pointer;
     }
 
+    .bars-btn{
+        position: absolute;
+        right: 0;
+        top: 1px;
+    }
+
     .header-nav{
         display: block;
     }

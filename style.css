@@ -249,7 +249,7 @@ p{
     .overlay{
         background-color:rgba(0, 0, 0, 0.6);
         opacity: 0.7;
-        transition: all ease-out 0.7s;
+        transition: all ease-in-out 0.7s;
     }
 
     @keyframes spin {
@@ -264,12 +264,6 @@ p{
         font-size: 1.4rem;
     }
 
-    .about-company h3{
-        font-size: 1.3rem;
-    }
-}
-
-@media screen and (max-width:350px){
     .about-company h3{
         font-size: 1rem;
     }

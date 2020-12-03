@@ -1,0 +1,279 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+
+:root{
+    --dark-gray:hsl(0, 0%, 63%);
+    --black:hsl(0, 0%, 0%);
+    --very-dark-gray:hsl(0, 0%, 27%)
+}
+
+body{
+     font-size: 12px;
+     font-family: "Spartan", sans-serif;
+}
+
+p{
+    line-height: 1.2rem;
+    color: var(--dark-gray);
+}
+
+.hero{
+    display: flex;
+}
+
+.header-nav{
+    position: absolute;
+    display: flex;
+    padding-left: 50px;
+    padding-top: 36px;
+    z-index: 9;
+}
+
+.bars-btn, .close-btn{
+    display: none;
+}
+
+.logo{
+    padding-top: 3px;
+    margin-right: 18px;
+}
+
+.list-items{
+    padding-top: 1px;
+}
+
+.list-items li{
+    list-style: none;
+    display: inline;
+    padding: 9px;
+    color: white;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: all ease-out 0.4s 0.4s;
+}
+
+.list-items li:hover{
+    border-bottom: 1px solid white;
+}
+
+.phone-switch{
+    display: none;
+}
+
+.mobile-img{
+    display: none;
+}
+
+.hero-info{
+    padding: 80px 20px 0 40px;
+}
+
+.hero-info h1{
+    font-size: 2rem;
+    padding-bottom: 30px;
+    width: 360px;
+}
+
+.hero-info p{
+    padding-bottom: 30px;
+}
+
+.shop-btn{
+    background: none;
+    font-family: inherit;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    display: flex;
+    cursor: pointer;
+}
+
+.shop-btn:hover{
+    color: var(--dark-gray);
+}
+
+.shop-btn:hover i{
+    animation: shakeRight 800ms ease-out alternate;
+    color: var(--dark-gray);
+}
+
+.switch-btn{
+    background: black;
+    padding: 10px;
+    width: 87px;
+    margin-left: -40px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 484px;
+    height: 50px;
+}
+
+.switch-btn img{
+    height: 15px;
+    margin-top: 5px;
+}
+
+.left-btn, .right-btn:hover{
+    cursor: pointer;
+}
+
+.about-company{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin: -3px 0 0;
+}
+
+.about-company div{
+    padding: 70px 40px;
+    height: 266px;
+    width: 500px;
+}
+
+.about-company h3{
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+@keyframes shakeRight{
+    0% {
+        transform: translateX(15%);
+    }
+    60% {
+        transform: translateX(-15%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width:1023px){
+    .header-nav{
+        z-index: 999;
+    }
+    .switch-btn{
+        display: none;
+    }
+
+    .phone-switch{
+        background: black;
+        padding: 10px;
+        width: 87px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        right: 0;
+        bottom: 4px;
+    }
+
+    .hero, .about-company{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-img, .about-company img{
+        width: 100%;
+    }
+
+    .about-company div{
+        height: auto;
+        width: auto;
+    }
+
+    .hero-info{
+        width: 100%;
+        padding: 40px;
+    }
+
+    .hero-info h1{
+        width: auto;
+    }
+}
+
+@media screen and (max-width:430px){
+    .bars-btn, .close-btn{
+        display: unset !important;
+        cursor: pointer;
+    }
+
+    .header-nav{
+        display: block;
+    }
+
+    .logo{
+        margin: 0 auto;
+        position: absolute;
+        left: 100px;
+        top: -1px;
+    }
+
+    .bars-logo{
+        position: absolute;
+        top: 30px;
+    }
+
+    .list-items{
+        background: white;
+        margin-left: -50px;
+        width: 100vw;
+        top: 0;
+        position: fixed;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        transform: translateX(-100%);
+        transition: all ease-out .4s;
+        overflow: hidden;
+    }
+
+    .list-items li{
+        color: black;
+    }
+
+    .show-list{
+        transform: translateX(0);
+    }
+
+    .spin-btn{
+        animation: spin 800ms ease-out 1s alternate;
+    }
+
+    .overlay{
+        background-color:rgba(0, 0, 0, 0.6);
+        opacity: 0.7;
+        transition: all ease-out 0.7s;
+    }
+
+    @keyframes spin {
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+}
+
+@media screen and (max-width:420px){
+    .hero-info h1{
+        font-size: 1.7rem;
+    }
+
+    .about-company h3{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width:350px){
+    .hero-info h1{
+        font-size: 1.4rem;
+    }
+
+    .about-company h3{
+        font-size: 1rem;
+    }
+}
